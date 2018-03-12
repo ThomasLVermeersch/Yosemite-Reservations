@@ -11,7 +11,7 @@ def get_reservation_data(site_dict, url1, num_of_sites):
 	now = datetime.datetime.now()
 	url2 = '&sitepage=true&startIdx='
 	session = requests.Session()
-	for i in range(2):
+	for i in range(10):
 		idx = 0
 		nowt = now.strftime("%m/%d/%Y")
 		url3 = url1 + str(nowt) + url2
@@ -72,12 +72,12 @@ def main():
 	np_sites = 79
 	wa_sites = 97
 	ho_sites = 103
-	#Populate each 
-	#get_reservation_data(upper_pines, upper_pines_base_url, up_sites)
-	#get_reservation_data(lower_pines, lower_pines_base_url, lp_sites)
-	#get_reservation_data(crane_flat, crane_flat_base_url, cf_sites)
-	#get_reservation_data(north_pines, north_pines_base_url, np_sites)
-	#get_reservation_data(wawona, wawona_base_url, wa_sites)
+	#Populate each Dictionary
+	get_reservation_data(upper_pines, upper_pines_base_url, up_sites)
+	get_reservation_data(lower_pines, lower_pines_base_url, lp_sites)
+	get_reservation_data(crane_flat, crane_flat_base_url, cf_sites)
+	get_reservation_data(north_pines, north_pines_base_url, np_sites)
+	get_reservation_data(wawona, wawona_base_url, wa_sites)
 	get_reservation_data(hodgdon, hodgdon_base_url, ho_sites)
 	for i in upper_pines:
 		print("Upper Pines Site: ", i, upper_pines[i])
