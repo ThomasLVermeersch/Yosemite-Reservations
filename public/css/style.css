@@ -1,0 +1,15 @@
+
+body{
+	margin: 0px;
+}
+#navbar {
+	position: fixed;
+	height: 10%;
+	min-height: 100px;
+	width: 100%;
+	background-color: grey;
+}
+h3{
+	font-size: 36px;
+	color: white;
+}
